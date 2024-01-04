@@ -5,8 +5,8 @@
 
 body {
   background-color: hsl(212, 45%, 89%);
-  gap: 10vh;
-  padding: 10vh 0;
+  gap: 5vh;
+  min-height: 100vh;
 }
 
 .center {
