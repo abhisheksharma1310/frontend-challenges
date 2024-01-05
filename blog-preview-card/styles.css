@@ -30,6 +30,9 @@ main {
   border-radius: 0.5rem;
   padding: 0.7rem;
   background-color: var(--white);
+}
+
+main:hover {
   box-shadow: .3rem .3rem 0 1px var(--black);
 }
 
@@ -51,10 +54,17 @@ button {
 }
 
 .author-info {
+  min-width: 100%;
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 0.5rem;
+}
+
+.author-info:hover {
+  background-color: var(--grey);
+  padding: .1rem .5rem;
+  border-radius: .2rem;
 }
 
 .avatar {
@@ -76,6 +86,11 @@ p {
 .post-heading {
     font-size: 1rem;
     font-weight: 800;
+}
+
+.post-heading:hover {
+  cursor: pointer;
+  color: var(--grey);
 }
 
 .post-detail {
