@@ -65,6 +65,7 @@ button {
   background-color: var(--grey);
   padding: .1rem .5rem;
   border-radius: .2rem;
+  cursor: pointer;
 }
 
 .avatar {
