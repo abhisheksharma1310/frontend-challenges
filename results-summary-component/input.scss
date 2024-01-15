@@ -1,0 +1,178 @@
+//Primary
+$light-red: hsl(0, 100%, 67%);
+$orangey-yellow: hsl(39, 100%, 56%);
+$green-teal: hsl(166, 100%, 37%);
+$cobalt-blue: hsl(234, 85%, 45%);
+
+//Gradients
+$light-slate-blue: hsl(252, 100%, 67%);
+$light-royal-blue: hsl(241, 81%, 54%);
+$violet-blue: hsla(256, 72%, 46%, 1);
+$persian-blue: hsla(241, 72%, 46%, 0);
+
+//Neutral
+$white: hsl(0, 0%, 100%);
+$pale-blue: hsl(221, 100%, 96%);
+$light-lavender: hsl(241, 100%, 89%);
+$dark-gray-blue: hsl(224, 30%, 27%);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+body {
+  height: 100vh;
+  gap: 5vh;
+  @include display-flex(column, center);
+}
+
+.container {
+  width: 40vw;
+  height: 60vh;
+  background-color: $white;
+  box-shadow: 0.5rem 0.5rem 0.5rem $light-lavender;
+  border-radius: 2rem;
+  @include display-flex(row, stretch);
+
+  .results {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(in hsl, $light-slate-blue, $light-royal-blue);
+    border-radius: 2rem;
+    @include display-flex(column, space-evenly);
+    color: $white;
+    padding: 0 2rem;
+
+    .result-text1 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $light-lavender;
+    }
+
+    .circle-view {
+      width: 9rem;
+      height: 9rem;
+      border-radius: 50%;
+      background: linear-gradient(in hsl, $violet-blue, $persian-blue);
+      @include display-flex(column, center);
+      padding: 2rem;
+
+      .result-text2 {
+        font-size: 3rem;
+        font-weight: 800;
+      }
+      .result-text3 {
+        font-size: 0.7rem;
+        color: $light-lavender;
+      }
+    }
+
+    .result-text4 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .result-text5 {
+      font-size: 0.8rem;
+      text-align: center;
+      color: $light-lavender;
+    }
+  }
+
+  .summary {
+    width: 50%;
+    height: 100%;
+    @include display-flex(column, space-evenly, stretch);
+    gap: 1rem;
+    padding: 1.5rem;
+
+    .summary-text1 {
+      font-size: 1rem;
+      color: $dark-gray-blue;
+      font-weight: 800;
+    }
+
+    .summary-lists {
+      @include display-flex(column, space-evenly, stretch);
+      gap: 1rem;
+    }
+
+    .summary-list-item {
+      @include display-flex(row, space-between, center);
+      gap: 2rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+
+      .summary-list-topic {
+        @include display-flex(row, space-between, center);
+        gap: 0.5rem;
+      }
+
+      .summary-list-text2 {
+        color: $dark-gray-blue;
+      }
+
+      .summary-list-text3 {
+        color: $light-lavender;
+        font-weight: 300;
+      }
+    }
+
+    button {
+      background: $dark-gray-blue;
+      width: 100%;
+      padding: 0.6rem;
+      color: $white;
+      border-radius: 1rem;
+      border: none;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 70vw;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .container {
+    width: 100vw;
+    height: 100%;
+    @include display-flex(column, space-evenly, stretch);
+    border-radius: 0 0 2rem 2rem;
+
+    .results {
+      width: 100%;
+      height: 100%;
+      border-radius: 0 0 2rem 2rem;
+    }
+
+    .summary {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

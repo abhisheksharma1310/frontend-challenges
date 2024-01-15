@@ -1,6 +1,6 @@
-# Frontend Mentor - Blog preview card solution
+# Frontend Mentor - Results summary component solution
 
-This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -19,16 +19,17 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/abhisheksharma1310/frontend-challenges/tree/main/blog-preview-card)
+- Solution URL: [Solution URL](https://your-solution-url.com)
 - Live Site URL: [Live site URL](https://your-live-site-url.com)
-
-## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS
+- JavaScript
+- DOM
+- Sass
 - Flexbox
+- Media Query
 
 ## Author
 

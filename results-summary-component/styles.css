@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+body {
+  height: 100vh;
+  gap: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 40vw;
+  height: 60vh;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0.5rem 0.5rem 0.5rem hsl(241, 100%, 89%);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+}
+.container .results {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(in hsl, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  padding: 0 2rem;
+}
+.container .results .result-text1 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(241, 100%, 89%);
+}
+.container .results .circle-view {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  background: linear-gradient(in hsl, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.container .results .circle-view .result-text2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.container .results .circle-view .result-text3 {
+  font-size: 0.7rem;
+  color: hsl(241, 100%, 89%);
+}
+.container .results .result-text4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.container .results .result-text5 {
+  font-size: 0.8rem;
+  text-align: center;
+  color: hsl(241, 100%, 89%);
+}
+.container .summary {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+.container .summary .summary-text1 {
+  font-size: 1rem;
+  color: hsl(224, 30%, 27%);
+  font-weight: 800;
+}
+.container .summary .summary-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 1rem;
+}
+.container .summary .summary-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.container .summary .summary-list-item .summary-list-topic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container .summary .summary-list-item .summary-list-text2 {
+  color: hsl(224, 30%, 27%);
+}
+.container .summary .summary-list-item .summary-list-text3 {
+  color: hsl(241, 100%, 89%);
+  font-weight: 300;
+}
+.container .summary button {
+  background: hsl(224, 30%, 27%);
+  width: 100%;
+  padding: 0.6rem;
+  color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  border: none;
+}
+
+.attribution {
+  font-size: 11px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 70vw;
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 840px) {
+  .container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    border-radius: 0 0 2rem 2rem;
+  }
+  .container .results {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 2rem 2rem;
+  }
+  .container .summary {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
