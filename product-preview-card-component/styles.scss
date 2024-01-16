@@ -1,0 +1,158 @@
+//Primary
+
+$dark-cyan: hsl(158, 36%, 37%);
+$dark-cyan-focused: rgb(2, 60, 39);
+$cream: hsl(30, 38%, 92%);
+
+//Neutral
+$very-dark-blue: hsl(212, 21%, 14%);
+$dark-grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin section-width($width: 50%, $height: 100%) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font-montserrat() {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin font-fraunces() {
+  font-family: "Fraunces", serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: $cream;
+  @include display-flex(column, center, center);
+  gap: 2rem;
+}
+
+main {
+  @include display-flex(row, space-between, stretch);
+  width: 35vw;
+  height: 55vh;
+  background-color: $white;
+  border-radius: 1rem;
+
+  img {
+    @include section-width();
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  section {
+    @include section-width();
+    @include display-flex(column, space-between, stretch);
+    padding: 1.5rem;
+    @include font-montserrat();
+    text-wrap: wrap;
+
+    .text1 {
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      font-size: 0.7rem;
+      color: $dark-grayish-blue;
+    }
+
+    .text2 {
+      @include font-fraunces();
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .text3 {
+      font-size: 0.8rem;
+      color: $dark-grayish-blue;
+    }
+
+    article {
+      @include display-flex(row, flex-start, center);
+      gap: 1.5rem;
+
+      .text4 {
+        font-size: 2rem;
+        color: $dark-cyan;
+      }
+
+      .text5 {
+        font-size: 0.7rem;
+        text-decoration: line-through;
+        color: $dark-grayish-blue;
+      }
+    }
+
+    button {
+      @include display-flex(row, center, center);
+      gap: 0.3rem;
+      background-color: $dark-cyan;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      color: $white;
+
+      img {
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+
+    button:hover {
+      background-color: $dark-cyan-focused;
+      cursor: pointer;
+    }
+  }
+}
+
+footer {
+    text-align: center;
+    @include font-montserrat();
+}
+
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1250px) {
+  main {
+    width: 55vw;
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    @include display-flex(column, space-between, stretch);
+    width: 90vw;
+    height: 90vh;
+
+    img {
+      @include section-width(100%, 50%);
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    section {
+      @include section-width(100%, 50%);
+    }
+  }
+}

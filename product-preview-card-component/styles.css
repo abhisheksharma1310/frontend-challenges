@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 35vw;
+  height: 55vh;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+}
+main img {
+  width: 50%;
+  height: 100%;
+  border-radius: 1rem 0 0 1rem;
+}
+main section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  text-wrap: wrap;
+}
+main section .text1 {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 0.7rem;
+  color: hsl(228, 12%, 48%);
+}
+main section .text2 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+main section .text3 {
+  font-size: 0.8rem;
+  color: hsl(228, 12%, 48%);
+}
+main section article {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+main section article .text4 {
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+}
+main section article .text5 {
+  font-size: 0.7rem;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+main section button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: hsl(158, 36%, 37%);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: hsl(0, 0%, 100%);
+}
+main section button img {
+  height: 1rem;
+  width: 1rem;
+}
+main section button:hover {
+  background-color: rgb(2, 60, 39);
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1250px) {
+  main {
+    width: 55vw;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 90vw;
+    height: 90vh;
+  }
+  main img {
+    width: 100%;
+    height: 50%;
+    border-radius: 1rem 1rem 0 0;
+  }
+  main section {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
