@@ -29,7 +29,7 @@ main img {
   height: 100%;
   border-radius: 1rem 0 0 1rem;
 }
-main section {
+main .details {
   width: 50%;
   height: 100%;
   display: flex;
@@ -40,38 +40,38 @@ main section {
   font-family: "Montserrat", sans-serif;
   text-wrap: wrap;
 }
-main section .text1 {
+main .details .text1 {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-size: 0.7rem;
   color: hsl(228, 12%, 48%);
 }
-main section .text2 {
+main .details .text2 {
   font-family: "Fraunces", serif;
   font-size: 2rem;
   font-weight: 700;
 }
-main section .text3 {
+main .details .text3 {
   font-size: 0.8rem;
   color: hsl(228, 12%, 48%);
 }
-main section .price {
+main .details .price {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
 }
-main section .price .text4 {
+main .details .price .text4 {
   font-size: 2rem;
   color: hsl(158, 36%, 37%);
 }
-main section .price .text5 {
+main .details .price .text5 {
   font-size: 0.7rem;
   text-decoration: line-through;
   color: hsl(228, 12%, 48%);
 }
-main section button {
+main .details button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -83,11 +83,11 @@ main section button {
   border-radius: 0.5rem;
   color: hsl(0, 0%, 100%);
 }
-main section button img {
+main .details button img {
   height: 1rem;
   width: 1rem;
 }
-main section button:hover {
+main .details button:hover {
   background-color: rgb(2, 60, 39);
   cursor: pointer;
 }
@@ -125,7 +125,7 @@ footer {
     height: 50%;
     border-radius: 1rem 1rem 0 0;
   }
-  main section {
+  main .details {
     width: 100%;
     height: 50%;
   }
