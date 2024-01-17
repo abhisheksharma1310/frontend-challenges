@@ -1,0 +1,125 @@
+// Primary
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+// Neutral
+
+$very-dark-blue-main: hsl(217, 54%, 11%);
+$very-dark-blue-card: hsl(216, 50%, 16%);
+$very-dark-blue-line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin p-text($size: 0.9rem, $weight: 300, $color: $soft-blue) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+
+@mixin card-size($width: 18vw, $height: 60vh) {
+  width: $width;
+  height: $height;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include display-flex();
+  gap: 2rem;
+  background-color: $very-dark-blue-main;
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  @include card-size();
+  @include display-flex(column, space-between, stretch);
+  padding: 1rem;
+  background-color: $very-dark-blue-card;
+  border-radius: 0.5rem;
+
+  .prev-img {
+    width: 100%;
+    height: 50%;
+    border-radius: 0.3rem;
+  }
+  .text1 {
+    @include p-text(1rem, 600, $white);
+  }
+  .text2 {
+    @include p-text();
+  }
+  .status {
+    @include display-flex(row, space-between, center);
+
+    .text3 {
+      @include display-flex(row, flex-start, center);
+      @include p-text(0.9rem, 400, $cyan);
+      gap: 0.3rem;
+    }
+    .text4 {
+      @include display-flex(row, flex-start, center);
+      @include p-text();
+      gap: 0.3rem;
+    }
+  }
+  hr {
+    border: 1px solid $very-dark-blue-line;
+  }
+  .user {
+    @include display-flex(row, flex-start, center);
+    gap: 1rem;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+    .text5 {
+      @include p-text();
+
+      span {
+        @include p-text(0.9rem, 300, $white);
+      }
+    }
+  }
+}
+
+footer {
+    text-align: center;
+}
+
+.attribution {
+  @include p-text(.7rem, 300, $white);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1340px) {
+  main {
+    @include card-size(30vw, 70vh);
+  }
+}
+
+@media screen and (max-width: 840px) {
+  main {
+    @include card-size(90vw, 90vh);
+  }
+}
