@@ -55,18 +55,18 @@ main section .text3 {
   font-size: 0.8rem;
   color: hsl(228, 12%, 48%);
 }
-main section article {
+main section .price {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
 }
-main section article .text4 {
+main section .price .text4 {
   font-size: 2rem;
   color: hsl(158, 36%, 37%);
 }
-main section article .text5 {
+main section .price .text5 {
   font-size: 0.7rem;
   text-decoration: line-through;
   color: hsl(228, 12%, 48%);

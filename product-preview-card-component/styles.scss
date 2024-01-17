@@ -83,7 +83,7 @@ main {
       color: $dark-grayish-blue;
     }
 
-    article {
+    .price {
       @include display-flex(row, flex-start, center);
       gap: 1.5rem;
 
