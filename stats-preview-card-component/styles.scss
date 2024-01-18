@@ -46,7 +46,7 @@ $slightly-transparent-white2: hsla(0, 0%, 100%, 0.6);
 body {
   background-color: $very-dark-blue;
   @include display-flex();
-  gap: 1rem;
+  gap: 2rem;
   height: 100vh;
 }
 
@@ -134,12 +134,9 @@ footer {
 }
 
 @media screen and (max-width: 640px) {
-  body {
-    height: 100%;
-  }
   main {
     @include display-flex(column-reverse, center, center);
-
+    
     .hero-img {
       @include size(100%, 30%);
     }

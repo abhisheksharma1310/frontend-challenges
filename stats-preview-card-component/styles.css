@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   height: 100vh;
 }
 
@@ -118,9 +118,6 @@ footer {
   }
 }
 @media screen and (max-width: 640px) {
-  body {
-    height: 100%;
-  }
   main {
     display: flex;
     flex-direction: column-reverse;
