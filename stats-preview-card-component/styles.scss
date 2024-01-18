@@ -54,6 +54,7 @@ main {
   background-color: $dark-desaturated-blue;
   @include size();
   @include display-flex(row, space-between, center);
+  border-radius: .5rem;
 
   section {
     @include size(45%, 100%);
@@ -98,6 +99,7 @@ main {
     @include size(50%, 100%);
     position: relative;
     background-color: $soft-violet;
+    border-radius: 0 .5rem .5rem 0;
   }
   .hero-img::before {
     @include size(100%, 100%);
@@ -112,6 +114,7 @@ main {
     background-size: cover;
     opacity: 0.4;
     background-blend-mode: screen;
+    border-radius: 0 .5rem .5rem 0;
   }
 }
 
