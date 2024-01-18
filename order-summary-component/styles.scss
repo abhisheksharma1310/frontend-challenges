@@ -1,0 +1,134 @@
+//Primary
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+//Neutral
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin size($width: 300px, $height: 420px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($size: 1rem, $weight: 300, $color: $desaturated-blue) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include display-flex();
+  height: 100vh;
+  background-color: $pale-blue;
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main {
+  @include size();
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 1rem;
+
+  img {
+    @include size(100%, 30%);
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .details {
+    @include display-flex(column, space-between, center);
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+
+    .text1 {
+      @include font(1rem, 900, $dark-blue);
+    }
+    .text2 {
+      @include font(0.7rem, 500, $desaturated-blue);
+    }
+    .plan {
+      @include display-flex(row, space-between, center);
+      gap: 1rem;
+      background-color: $very-pale-blue;
+      padding: 0.7rem 1rem;
+      width: 100%;
+
+      img {
+        @include size(2rem, 2rem);
+      }
+      div {
+        text-align: left;
+
+        .text3 {
+          @include font(0.7rem, 900, $dark-blue);
+        }
+        .text4 {
+          @include font(0.7rem, 500, $desaturated-blue);
+        }
+      }
+      a {
+        @include font(0.6rem, 700, $bright-blue);
+      }
+      a:hover {
+        text-decoration: none;
+      }
+    }
+    button {
+      background-color: $bright-blue;
+      width: 100%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 0.3rem;
+      @include font(0.7rem, 700, white);
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+    .text5 {
+      @include font(0.6rem, 700, $desaturated-blue);
+      cursor: pointer;
+    }
+    .text5:hover {
+      color: $dark-blue;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+}
+.attribution {
+  @include font(0.7rem, 300, $dark-blue);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+}
