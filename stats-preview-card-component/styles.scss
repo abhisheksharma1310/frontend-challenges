@@ -1,0 +1,171 @@
+// Primary
+
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+
+// Neutral
+
+$white: hsl(0, 0%, 100%);
+$slightly-transparent-white1: hsla(0, 0%, 100%, 0.75);
+$slightly-transparent-white2: hsla(0, 0%, 100%, 0.6);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin size($width: 70vw, $height: 50vh) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font(
+  $size: 1rem,
+  $weight: 300,
+  $color: $white,
+  $font-family: "Lexend Deca"
+) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-family: $font-family, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $very-dark-blue;
+  @include display-flex();
+  gap: 1rem;
+  height: 100vh;
+}
+
+main {
+  background-color: $dark-desaturated-blue;
+  @include size();
+  @include display-flex(row, space-between, center);
+
+  section {
+    @include size(45%, 100%);
+    @include display-flex(column, center, flex-start);
+    gap: 2rem;
+    padding: 2rem;
+    text-align: left;
+
+    h1 {
+      @include font(2rem, 700, $white, "Inter");
+
+      span {
+        color: $soft-violet;
+      }
+    }
+    p {
+      @include font(0.9rem, 400, $slightly-transparent-white1, "Lexend Deca");
+    }
+    .stats {
+      margin-top: 1rem;
+      width: 90%;
+      @include display-flex(row, space-between, center);
+      gap: 0.5rem;
+
+      .stat {
+        text-transform: uppercase;
+        .numbers {
+          @include font(1rem, 700, $white, "Inter");
+        }
+        .texts {
+          @include font(
+            0.5rem,
+            400,
+            $slightly-transparent-white2,
+            "Lexend Deca"
+          );
+        }
+      }
+    }
+  }
+  .hero-img {
+    @include size(50%, 100%);
+    position: relative;
+    background-color: $soft-violet;
+  }
+  .hero-img::before {
+    @include size(100%, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background-image: url(./images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    background-blend-mode: screen;
+  }
+}
+
+footer {
+  text-align: center;
+  @include font();
+}
+
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    @include size(90vw, 70vh);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    height: 100%;
+  }
+  main {
+    @include display-flex(column-reverse, center, center);
+
+    .hero-img {
+      @include size(100%, 30%);
+    }
+    .hero-img::before {
+      background-image: url(./images/image-header-mobile.jpg);
+    }
+    section {
+      @include size(100%, 70%);
+      @include display-flex();
+      text-align: center;
+
+      h1 {
+        @include font(1rem, 700, $white, "Inter");
+      }
+      p {
+        @include font(0.7rem, 400, $slightly-transparent-white1, "Lexend Deca");
+      }
+      .stats {
+        @include display-flex();
+
+        .stat {
+          .numbers {
+            @include font(0.8rem, 700, $white, "Inter");
+          }
+        }
+      }
+    }
+  }
+}
