@@ -19,8 +19,8 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/abhisheksharma1310/frontend-challenges/tree/main/social-link-profile)
-- Live Site URL: [Live site URL](https://abhisheksharma1310.github.io/frontend-challenges/social-link-profile/index.html)
+- Solution URL: [Solution URL](https://github.com/abhisheksharma1310/frontend-challenges/tree/main/social-links-profile)
+- Live Site URL: [Live site URL](https://abhisheksharma1310.github.io/frontend-challenges/social-links-profile/index.html)
 
 ### Built with
 
