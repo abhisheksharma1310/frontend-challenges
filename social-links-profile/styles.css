@@ -23,6 +23,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
   background-color: hsl(0, 0%, 12%);
   padding: 2rem;
   border-radius: 0.5rem;
@@ -39,14 +40,16 @@ main .text1 {
   color: hsl(0, 0%, 100%);
 }
 main .text2 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: hsl(75, 94%, 57%);
+  margin-top: -0.7rem;
 }
 main .text3 {
   font-size: 0.9rem;
   font-weight: 400;
   color: hsl(0, 0%, 100%);
+  margin-top: 0.3rem;
 }
 main a {
   display: block;

@@ -47,6 +47,7 @@ body {
 main {
   @include size();
   @include display-flex(column, space-between, center);
+  gap: 0.5rem;
   background-color: $dark-Grey;
   padding: 2rem;
   border-radius: 0.5rem;
@@ -60,10 +61,12 @@ main {
     @include font(1.5rem, 700, $white);
   }
   .text2 {
-    @include font(1rem, 400, $green);
+    @include font(.9rem, 400, $green);
+    margin-top: -0.7rem;
   }
   .text3 {
     @include font(0.9rem, 400, $white);
+    margin-top: .3rem;
   }
   a {
     display: block;
