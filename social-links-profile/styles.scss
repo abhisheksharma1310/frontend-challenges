@@ -1,0 +1,97 @@
+// Primary
+$green: hsl(75, 94%, 57%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 20%);
+$dark-Grey: hsl(0, 0%, 12%);
+$off-Black: hsl(0, 0%, 8%);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin size($width: 340px, $height: 540px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($size: 1rem, $weight: 400, $color: $white) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $off-Black;
+  height: 100vh;
+  @include display-flex();
+  gap: 2rem;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+main {
+  @include size();
+  @include display-flex(column, space-between, center);
+  background-color: $dark-Grey;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+
+  img {
+    @include size(4rem, 4rem);
+    border-radius: 50%;
+  }
+  .text1 {
+    @include font(1.5rem, 700, $white);
+  }
+  .text2 {
+    @include font(1rem, 400, $green);
+  }
+  .text3 {
+    @include font(0.9rem, 400, $white);
+  }
+  a {
+    display: block;
+    background-color: $grey;
+    @include size(100%, auto);
+    @include font(1rem, 600, $white);
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: $green;
+    color: $grey;
+    cursor: pointer;
+  }
+}
+footer {
+  color: $white;
+}
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: $green;
+}
+
+@media screen and (max-width: 340px) {
+  main {
+    @include size(95vw, 95vh);
+  }
+}
