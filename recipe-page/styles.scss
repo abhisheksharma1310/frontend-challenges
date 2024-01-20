@@ -1,0 +1,128 @@
+//Primary
+$nutmeg: hsl(14, 45%, 36%);
+$dark-raspberry: hsl(332, 51%, 32%);
+
+//Neutral
+$white: hsl(0, 0%, 100%);
+$rose-white: hsl(330, 100%, 98%);
+$eggshell: hsl(30, 54%, 90%);
+$light-grey: hsl(30, 18%, 87%);
+$wenge-brown: hsl(30, 10%, 34%);
+$dark-charcoal: hsl(24, 5%, 18%);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin size($width: 40vw, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($size: 1rem, $weight: 400, $color: $dark-Charcoal) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $eggshell;
+  @include display-flex();
+  padding: 10vh;
+  gap: 2rem;
+}
+main {
+  @include size();
+  background-color: $white;
+  @include display-flex(column, space-between, flex-start);
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 1rem;
+
+  img {
+    @include size(100%, 200px);
+    border-radius: 0.5rem;
+  }
+  header {
+    @include font(1rem, 400, $dark-charcoal);
+    font-family: "Young Serif", serif;
+  }
+  p {
+    @include font(0.8rem, 400, $dark-charcoal);
+    font-family: "Outfit", sans-serif;
+  }
+
+  h2 {
+    @include font(1rem, 400, $nutmeg);
+    font-family: "Young Serif", serif;
+  }
+
+  ul,
+  ol {
+    margin: 0.7rem 1.5rem;
+  }
+  li {
+    padding: 0.3rem;
+    @include font(0.8rem, 400, $dark-charcoal);
+    font-family: "Outfit", sans-serif;
+  }
+  li > span {
+    @include font(0.8rem, 700, $dark-charcoal);
+    font-family: "Outfit", sans-serif;
+  }
+  li::marker {
+    color: $dark-raspberry;
+    font-weight: 700;
+  }
+  hr {
+    width: 100%;
+    border: 1px solid $light-grey;
+  }
+
+  .preparation-section {
+    width: 100%;
+    background-color: $rose-white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.4rem;
+
+    h3 {
+      @include font(1rem, 600, $dark-raspberry);
+      font-family: "Outfit", sans-serif;
+    }
+  }
+  .nutrition-section {
+    @include display-flex(column, space-between, flex-start);
+    gap: 1rem;
+    width: 100%;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      tbody > tr:not(:last-child) > td {
+        border-bottom: 1px solid $light-grey;
+      }
+      tbody > tr > td {
+        padding: 0.8rem;
+        @include font(0.8rem, 400, $dark-charcoal);
+        font-family: "Outfit", sans-serif;
+      }
+      tbody > tr > td:last-child {
+        @include font(0.8rem, 600, $nutmeg);
+        font-family: "Outfit", sans-serif;
+      }
+    }
+  }
+}
