@@ -10,12 +10,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10vh;
+  padding: 5vh;
   gap: 2rem;
 }
 
 main {
-  width: 40vw;
+  width: 600px;
   height: auto;
   background-color: hsl(0, 0%, 100%);
   display: flex;
@@ -44,7 +44,7 @@ main p {
   font-family: "Outfit", sans-serif;
 }
 main h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: hsl(14, 45%, 36%);
   font-family: "Young Serif", serif;
@@ -113,6 +113,35 @@ main .nutrition-section table tbody > tr > td:last-child {
   font-weight: 600;
   color: hsl(14, 45%, 36%);
   font-family: "Outfit", sans-serif;
+}
+
+footer {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+}
+
+.attribution a {
+  color: hsl(14, 45%, 36%);
+}
+
+@media screen and (max-width: 1250px) {
+  main {
+    width: 55vw;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 640px) {
+  body {
+    padding: 0;
+  }
+  main {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

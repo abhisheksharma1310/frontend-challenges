@@ -21,7 +21,7 @@ $dark-charcoal: hsl(24, 5%, 18%);
   align-items: $align-items;
 }
 
-@mixin size($width: 40vw, $height: auto) {
+@mixin size($width: 600px, $height: auto) {
   width: $width;
   height: $height;
 }
@@ -40,9 +40,10 @@ $dark-charcoal: hsl(24, 5%, 18%);
 body {
   background-color: $eggshell;
   @include display-flex();
-  padding: 10vh;
+  padding: 5vh;
   gap: 2rem;
 }
+
 main {
   @include size();
   background-color: $white;
@@ -63,12 +64,10 @@ main {
     @include font(0.8rem, 400, $dark-charcoal);
     font-family: "Outfit", sans-serif;
   }
-
   h2 {
-    @include font(1rem, 400, $nutmeg);
+    @include font(1.2rem, 400, $nutmeg);
     font-family: "Young Serif", serif;
   }
-
   ul,
   ol {
     margin: 0.7rem 1.5rem;
@@ -124,5 +123,33 @@ main {
         font-family: "Outfit", sans-serif;
       }
     }
+  }
+}
+
+footer {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.attribution {
+font-size: 11px;
+}
+.attribution a {
+color: $nutmeg;
+}
+
+@media screen and (max-width: 1250px) {
+main {
+  width: 55vw;
+  height: 50vh;
+}
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    padding: 0;
+  }
+  main {
+    @include size(100%, auto);
   }
 }
