@@ -21,7 +21,7 @@ $dark-charcoal: hsl(24, 5%, 18%);
   align-items: $align-items;
 }
 
-@mixin size($width: 600px, $height: auto) {
+@mixin size($width: 750px, $height: auto) {
   width: $width;
   height: $height;
 }
@@ -40,7 +40,7 @@ $dark-charcoal: hsl(24, 5%, 18%);
 body {
   background-color: $eggshell;
   @include display-flex();
-  padding: 5vh;
+  padding: 20vh;
   gap: 2rem;
 }
 
@@ -53,19 +53,19 @@ main {
   border-radius: 1rem;
 
   img {
-    @include size(100%, 200px);
+    @include size(100%, 300px);
     border-radius: 0.5rem;
   }
   header {
-    @include font(1rem, 400, $dark-charcoal);
+    @include font(1.5rem, 400, $dark-charcoal);
     font-family: "Young Serif", serif;
   }
   p {
-    @include font(0.8rem, 400, $dark-charcoal);
+    @include font(1rem, 400, $dark-charcoal);
     font-family: "Outfit", sans-serif;
   }
   h2 {
-    @include font(1.2rem, 400, $nutmeg);
+    @include font(2rem, 400, $nutmeg);
     font-family: "Young Serif", serif;
   }
   ul,
@@ -73,12 +73,12 @@ main {
     margin: 0.7rem 1.5rem;
   }
   li {
-    padding: 0.3rem;
-    @include font(0.8rem, 400, $dark-charcoal);
+    padding: 0.5rem;
+    @include font(1rem, 400, $dark-charcoal);
     font-family: "Outfit", sans-serif;
   }
   li > span {
-    @include font(0.8rem, 700, $dark-charcoal);
+    @include font(1rem, 700, $dark-charcoal);
     font-family: "Outfit", sans-serif;
   }
   li::marker {
@@ -96,8 +96,8 @@ main {
     padding: 1rem 1.5rem;
     border-radius: 0.4rem;
 
-    h3 {
-      @include font(1rem, 600, $dark-raspberry);
+    h2 {
+      @include font(1.5rem, 600, $dark-raspberry);
       font-family: "Outfit", sans-serif;
     }
   }
@@ -114,12 +114,12 @@ main {
         border-bottom: 1px solid $light-grey;
       }
       tbody > tr > td {
-        padding: 0.8rem;
-        @include font(0.8rem, 400, $dark-charcoal);
+        padding: 1rem;
+        @include font(1rem, 400, $dark-charcoal);
         font-family: "Outfit", sans-serif;
       }
       tbody > tr > td:last-child {
-        @include font(0.8rem, 600, $nutmeg);
+        @include font(1rem, 600, $nutmeg);
         font-family: "Outfit", sans-serif;
       }
     }
@@ -140,12 +140,12 @@ color: $nutmeg;
 
 @media screen and (max-width: 1250px) {
 main {
-  width: 55vw;
-  height: 50vh;
+  width: 75vw;
+  height: auto;
 }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 750px) {
   body {
     padding: 0;
   }

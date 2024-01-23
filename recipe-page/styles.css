@@ -10,12 +10,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5vh;
+  padding: 20vh;
   gap: 2rem;
 }
 
 main {
-  width: 600px;
+  width: 750px;
   height: auto;
   background-color: hsl(0, 0%, 100%);
   display: flex;
@@ -28,23 +28,23 @@ main {
 }
 main img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   border-radius: 0.5rem;
 }
 main header {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: hsl(24, 5%, 18%);
   font-family: "Young Serif", serif;
 }
 main p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
   color: hsl(24, 5%, 18%);
   font-family: "Outfit", sans-serif;
 }
 main h2 {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 400;
   color: hsl(14, 45%, 36%);
   font-family: "Young Serif", serif;
@@ -54,14 +54,14 @@ main ol {
   margin: 0.7rem 1.5rem;
 }
 main li {
-  padding: 0.3rem;
-  font-size: 0.8rem;
+  padding: 0.5rem;
+  font-size: 1rem;
   font-weight: 400;
   color: hsl(24, 5%, 18%);
   font-family: "Outfit", sans-serif;
 }
 main li > span {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   color: hsl(24, 5%, 18%);
   font-family: "Outfit", sans-serif;
@@ -80,8 +80,8 @@ main .preparation-section {
   padding: 1rem 1.5rem;
   border-radius: 0.4rem;
 }
-main .preparation-section h3 {
-  font-size: 1rem;
+main .preparation-section h2 {
+  font-size: 1.5rem;
   font-weight: 600;
   color: hsl(332, 51%, 32%);
   font-family: "Outfit", sans-serif;
@@ -102,14 +102,14 @@ main .nutrition-section table tbody > tr:not(:last-child) > td {
   border-bottom: 1px solid hsl(30, 18%, 87%);
 }
 main .nutrition-section table tbody > tr > td {
-  padding: 0.8rem;
-  font-size: 0.8rem;
+  padding: 1rem;
+  font-size: 1rem;
   font-weight: 400;
   color: hsl(24, 5%, 18%);
   font-family: "Outfit", sans-serif;
 }
 main .nutrition-section table tbody > tr > td:last-child {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   color: hsl(14, 45%, 36%);
   font-family: "Outfit", sans-serif;
@@ -130,11 +130,11 @@ footer {
 
 @media screen and (max-width: 1250px) {
   main {
-    width: 55vw;
-    height: 50vh;
+    width: 75vw;
+    height: auto;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 750px) {
   body {
     padding: 0;
   }
