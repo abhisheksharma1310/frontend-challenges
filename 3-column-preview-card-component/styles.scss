@@ -1,0 +1,122 @@
+// Primary
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+// Neutral
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin size($width: 800px, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($size: 1rem, $weight: 400, $color: $very-light-gray) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $very-light-gray;
+  @include display-flex();
+  height: 100vh;
+  gap: 2rem;
+}
+
+main {
+  @include display-flex(row, space-between, center);
+  @include size();
+
+  section {
+    @include display-flex(column, space-between, flex-start);
+    gap: 1.5rem;
+    padding: 2.5rem;
+
+    h1 {
+      font-family: "Big Shoulders Display", sans-serif;
+      text-transform: uppercase;
+      @include font(1.5rem, 700, $very-light-gray);
+    }
+
+    p {
+      font-family: "Lexend Deca", sans-serif;
+      @include font(0.8rem, 400, $transparent-white);
+    }
+
+    button {
+      background-color: $very-light-gray;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 1rem;
+      margin-top: 1.5rem;
+      font-family: "Lexend Deca", sans-serif;
+    }
+    button:hover {
+      background-color: transparent;
+      cursor: pointer;
+      border: 2px solid $very-light-gray;
+      color: $very-light-gray;
+    }
+  }
+  .sedans {
+    background-color: $bright-orange;
+
+    button {
+      color: $bright-orange;
+    }
+  }
+  .suvs {
+    background-color: $dark-cyan;
+
+    button {
+      color: $dark-cyan;
+    }
+  }
+  .luxury {
+    background-color: $very-dark-cyan;
+
+    button {
+      color: $very-dark-cyan;
+    }
+  }
+}
+footer {
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: $dark-cyan;
+}
+@media screen and (max-width: 800px) {
+  body {
+    height: auto;
+    padding: 10vh 2vw;
+  }
+  main {
+    @include size(95vw, auto);
+    @include display-flex(column, space-between, center);
+  }
+}
