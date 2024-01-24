@@ -1,0 +1,130 @@
+// Primary
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+
+// Neutral
+$dark-gray: hsl(0, 0%, 59%);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center,
+  $gap: 2rem
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin size($width: 300px, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($size: 1rem, $weight: 400, $color: $very-dark-desaturated-blue) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $dark-cyan;
+  @include display-flex();
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+
+  .bg-top {
+    position: fixed;
+    top: -500px;
+    left: -200px;
+    z-index: -1;
+  }
+  .bg-bottom {
+    position: fixed;
+    bottom: -500px;
+    right: -200px;
+    z-index: -1;
+  }
+}
+
+main {
+  @include size();
+  z-index: 1;
+  position: relative;
+
+  img {
+    @include size(86px, 86px);
+    border-radius: 50%;
+    border: 4px solid white;
+    position: absolute;
+    top: calc(33% - 43px);
+    left: calc(50% - 43px);
+  }
+  .card-top {
+    background-color: $dark-cyan;
+    background-image: url(./images/bg-pattern-card.svg);
+    @include size(100%, 100px);
+    border-radius: 1rem 1rem 0 0;
+  }
+  .card-bottom {
+    background-color: white;
+    @include size(100%, 200px);
+    @include display-flex(column, center, center, 1rem);
+    padding: 4rem 3rem 1rem 3rem;
+    border-radius: 0 0 1rem 1rem;
+
+    h1 {
+      @include font(1rem, 700, $very-dark-desaturated-blue);
+
+      span {
+        @include font(1rem, 400, $dark-gray);
+      }
+    }
+    p {
+      @include font(0.8rem, 400, $dark-gray);
+    }
+    hr {
+      @include size(calc(100% + 6rem), auto);
+      border-top: 1px solid $dark-gray;
+    }
+    .stats {
+      width: 100%;
+      @include display-flex(row, space-between, center, 1rem);
+      flex-wrap: wrap;
+      text-align: center;
+
+      .numbers {
+        @include font(1rem, 700, $very-dark-desaturated-blue);
+      }
+      p {
+        @include font(0.7rem, 400, $dark-gray);
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: white;
+}
+
+@media screen and (max-width: 300px) {
+  main {
+    @include size(95vw, auto);
+  }
+}
