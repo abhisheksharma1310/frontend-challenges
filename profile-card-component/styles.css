@@ -11,20 +11,11 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
-}
-body .bg-top {
-  position: fixed;
-  top: -500px;
-  left: -200px;
-  z-index: -1;
-}
-body .bg-bottom {
-  position: fixed;
-  bottom: -500px;
-  right: -200px;
-  z-index: -1;
+  background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
 }
 
 main {

@@ -39,21 +39,13 @@ $dark-gray: hsl(0, 0%, 59%);
 body {
   background-color: $dark-cyan;
   @include display-flex();
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
 
-  .bg-top {
-    position: fixed;
-    top: -500px;
-    left: -200px;
-    z-index: -1;
-  }
-  .bg-bottom {
-    position: fixed;
-    bottom: -500px;
-    right: -200px;
-    z-index: -1;
-  }
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
 }
 
 main {
