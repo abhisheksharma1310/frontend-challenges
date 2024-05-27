@@ -1,0 +1,166 @@
+// Primary
+
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+
+// Neutral
+
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+@mixin display-flex(
+  $flex-direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin size($width: 90vw, $height: auto) {
+  width: $width;
+  min-height: $height;
+}
+
+@mixin font($size: 11rem, $weight: 400, $color: very-dark-magenta) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  background-image: url("./images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 100% 100%;
+}
+
+main {
+  margin: 5% 10%;
+  height: 30%;
+  @include display-flex(row, space-between, flex-start);
+
+  header {
+    width: 40%;
+    @include display-flex(column, flex-start, flex-start);
+    gap: 1.5rem;
+
+    h1 {
+      width: 80%;
+      @include font(3.5rem, 700, $very-dark-magenta);
+    }
+    p {
+      width: 90%;
+      @include font(1.1rem, 400, $dark-grayish-magenta);
+    }
+  }
+
+  .ratings {
+    margin-top: 2.5rem;
+    width: 50%;
+
+    div {
+      @include display-flex(row, flex-start, center);
+      gap: 1rem;
+      background-color: $light-grayish-magenta;
+      padding: 0.5rem 3rem 0.5rem 1rem;
+      margin-bottom: 1rem;
+      width: 65%;
+      border-radius: 0.1rem;
+      @include font(1rem, 500, $very-dark-magenta);
+    }
+    #rating1 {
+      margin-left: 0;
+    }
+    #rating2 {
+      margin-left: 3rem;
+    }
+    #rating3 {
+      margin-left: 6rem;
+    }
+  }
+}
+
+section {
+  margin: 5% 10%;
+  display: flex;
+  gap: 2rem;
+
+  #a2 {
+    margin-top: 20px;
+  }
+  #a3 {
+    margin-top: 40px;
+  }
+
+  article {
+    background-color: $very-dark-magenta;
+    padding: 2rem 1.5rem;
+    border-radius: 0.3rem;
+    @include display-flex(column, flex-start, flex-start);
+    gap: 1rem;
+    height: max-content;
+
+    .profile {
+      display: flex;
+      gap: 1rem;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+      }
+      .name {
+        @include font(1rem, 400, $white);
+      }
+      .verified-user {
+        @include font(1rem, 400, $soft-pink);
+      }
+    }
+
+    p {
+      @include font(1rem, 400, $white);
+    }
+  }
+}
+
+
+@media  (max-width: 720px) {
+  body, main, section {
+    @include display-flex();
+  }
+  main {
+    header {
+    width: 90%;
+    @include display-flex();
+    text-align: center;
+    }
+    .ratings {
+      @include display-flex();
+      width: 90%;
+      div {
+        @include display-flex();
+        gap: .5rem;
+      }
+      p {
+        text-align: center;
+      }
+      #rating1, #rating2, #rating3 {
+        margin-left: 0;
+      }
+    }
+  }
+}

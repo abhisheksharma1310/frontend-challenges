@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  background-image: url("./images/bg-pattern-top-desktop.svg"), url("./images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 100% 100%;
+}
+
+main {
+  margin: 5% 10%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main header {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+main header h1 {
+  width: 80%;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+main header p {
+  width: 90%;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: hsl(303, 10%, 53%);
+}
+main .ratings {
+  margin-top: 2.5rem;
+  width: 50%;
+}
+main .ratings div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(300, 24%, 96%);
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  margin-bottom: 1rem;
+  width: 65%;
+  border-radius: 0.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(300, 43%, 22%);
+}
+main .ratings #rating1 {
+  margin-left: 0;
+}
+main .ratings #rating2 {
+  margin-left: 3rem;
+}
+main .ratings #rating3 {
+  margin-left: 6rem;
+}
+
+section {
+  margin: 5% 10%;
+  display: flex;
+  gap: 2rem;
+}
+section #a2 {
+  margin-top: 20px;
+}
+section #a3 {
+  margin-top: 40px;
+}
+section article {
+  background-color: hsl(300, 43%, 22%);
+  padding: 2rem 1.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  height: max-content;
+}
+section article .profile {
+  display: flex;
+  gap: 1rem;
+}
+section article .profile img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+section article .profile .name {
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+}
+section article .profile .verified-user {
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(333, 80%, 67%);
+}
+section article p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 720px) {
+  body, main, section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main header {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  main .ratings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  main .ratings div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  main .ratings p {
+    text-align: center;
+  }
+  main .ratings #rating1, main .ratings #rating2, main .ratings #rating3 {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
