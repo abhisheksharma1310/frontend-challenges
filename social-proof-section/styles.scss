@@ -125,6 +125,7 @@ section {
       }
       .name {
         @include font(1rem, 400, $white);
+        margin-bottom: .3rem;
       }
       .verified-user {
         @include font(1rem, 400, $soft-pink);

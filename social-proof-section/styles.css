@@ -106,6 +106,7 @@ section article .profile .name {
   font-size: 1rem;
   font-weight: 400;
   color: hsl(0, 0%, 100%);
+  margin-bottom: 0.3rem;
 }
 section article .profile .verified-user {
   font-size: 1rem;
